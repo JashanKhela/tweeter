@@ -1,0 +1,36 @@
+textarea {
+    padding-left : 10px ;
+    padding-top: 10px ; 
+    width : 362px ;
+
+
+    
+}
+
+h2{
+
+    border-bottom: 2px solid black;
+    
+    padding-bottom:3px;
+    margin-bottom: 15px;
+    
+}
+
+.new-tweet {
+    margin-top: 100px;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 1px solid #D0D0D0;
+    background-color: #eee;
+    border-radius: 10px;
+    
+}
+.tweet-footer {
+    float: right ;
+    font-size: smaller ;
+    padding-right: 10px ;
+    padding-top: 3px ;
+}
+.tweet-button{
+    margin-bottom: 10px
+}
