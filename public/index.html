@@ -12,18 +12,21 @@
     <!--Link the Style Sheet for nav-->
     <link rel="stylesheet" href="/styles/nav.css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" />
+     <link rel="stylesheet" href="/styles/tweets.css" />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
       <!-- Link the Char Counter -->
     <script src ="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -42,7 +45,34 @@
               <input class="tweet-button"type="submit" value="Tweet">
               <footer id="counter"class="tweet-footer"><span class="counter">140</span></footer>
             </form>
-          </section>
+        </section>
+        <section id="tweet-feed" class="container-for-tweets">
+          <article class="new-tweet-article">
+            <div class ="header-tweet">
+            <header>
+              <img src="https://www.shareicon.net/data/1024x1024/2015/08/28/91965_emoticon_1024x1024.png" height="50px" width="50px" >
+              <h3>Bill Fields</h3>
+              <h5>@MR.Fields</h5>
+            </header>
+          </div>
+          <div class="tweet-body">
+            <p>
+            Little tweet here
+          </p>
+
+          </div>
+            <footer class="tweet-footer">
+              <p>10 days ago</p>
+              <div class="icons">
+                <span class="fa fa-flag"></span>
+                <span class="fa fa-refresh" ></span>
+                <span class="fa fa-heart" ></span>
+               </div>
+            </footer>
+          </article>
+
+
+        </section>
     </main>
 
   </body>
