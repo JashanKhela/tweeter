@@ -6,7 +6,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.header-tweet img{
+.new-tweet-article img{
   float: left;
   margin-top: 10px;
   margin-left: 10px;
@@ -26,14 +26,14 @@
   padding: 2px;
 }
 
-.header-tweet h3 {
+.new-tweet-article header h3 {
   float: left ;
   padding-left: 10px;
   margin-top: 10px;
   color: grey ;
  }
 
-.header-tweet h5 {
+.new-tweet-article header h5 {
   float: right ;
   margin-right: 10px;
   color: grey
@@ -47,7 +47,7 @@
 }
 
 
-.header-tweet header {
+.new-tweet-article header {
   height: 70px;
   background-color: #eee;
   border: 1px solid #eeeeee;
@@ -76,13 +76,12 @@
   margin-bottom: 0px;
   margin-top: 5px;
 }
-.new-tweet-article footer {
-  float: left ;
-}
+
 .new-tweet-article footer {
   width: 100%;
   position: relative;
   margin-left: 10px ;
+  float: left ;
 }
 .icons {
   display: none;
