@@ -6,7 +6,6 @@ $("#tweet-textarea").on('input propertychange paste', function(){
      const tweetContent = $(this).val() ;
      const chartweetCount = Array.from(tweetContent).length ;
      const remainingChar = 140 - chartweetCount ;
-     console.log(remainingChar);
      $counter.html(remainingChar) ;
 
     if(remainingChar < 0) {

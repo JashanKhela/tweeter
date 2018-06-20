@@ -32,6 +32,21 @@ main {
   margin: 50px auto;
   background-color: white;
 }
+.new-tweet article {
+  display: none;
+  height: 30px;
+}
+
+.alert-box {
+  display: block !important;
+  background-color: lightcoral;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-left: 50px ;
+  padding-top: 5px;
+
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

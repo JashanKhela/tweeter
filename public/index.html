@@ -3,7 +3,6 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
@@ -27,6 +26,8 @@
       <!-- Link the Char Counter -->
     <script src ="/scripts/composer-char-counter.js"></script>
 
+
+
   </head>
 
   <body>
@@ -35,10 +36,12 @@
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
     </nav>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
+<!--           <article id="alert" class="alert">
+
+          </article> -->
             <h2>Compose Tweet</h2>
             <form method="POST" action="/tweets">
                <textarea  id="tweet-textarea" name="text" placeholder="What are you humming about?"></textarea>
@@ -46,6 +49,9 @@
               <input class="tweet-button"type="submit" value="Tweet">
               <footer id="counter"class="tweet-footer"><span class="counter">140</span></footer>
             </form>
+                      <article id="alert" class="alert">
+
+          </article>
         </section>
         <section id="tweet-feed" class="container-for-tweets">
  <!--          <article class="new-tweet-article">

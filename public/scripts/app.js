@@ -1,4 +1,5 @@
 $(document).ready(function() { console.log('ready')
+loadTweets()
 const data = [
   {
     "user": {
@@ -46,13 +47,31 @@ const data = [
   }
 ];
 
+function formValidation(formdata) {
+  let valid = false;
+  if(formdata.length === 5){
+    valid = false;
+  } else {
+    return true ;
+  }
+  return valid;
+}
+
 function renderTweets(tweets) {
   for( let item in tweets){
     createTweetElement(tweets[item]);
   }
  }
 
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 function createHTMLObject(inputObj) {
+  const safeTweet = `${escape(inputObj.tweet)}`;
+
   let HTMLObj =`
    <article class="new-tweet-article">
     <header>
@@ -61,7 +80,7 @@ function createHTMLObject(inputObj) {
       <h5>${inputObj.handle}</h5>
    </header>
     <div class="tweet-body">
-    <p class ="message">${inputObj.tweet}</p>
+    <p class ="message">${safeTweet}</p>
     </div>
     <footer>
       <p>${inputObj.createDate} Days Ago</p>
@@ -93,21 +112,41 @@ function createTweetElement(tweetObj){
   $('#tweet-feed').prepend(myHTMLObject);
 }
 
-renderTweets(data);
+function loadTweets(data) {
+  $.ajax('/tweets').done(function(data){
+      $('#tweet-feed').html('');
+       renderTweets(data);
+     })
+}
+
+
+
 
 $('form').on('submit', function(e) {
   e.preventDefault();
+
   let data = $('form').serialize();
+  let valid = formValidation(data)
+  if (valid) {
 // 2. Make a AJAX request using that data
   $.ajax('/tweets', {
   method: 'POST',
   data: data
-   }).done(function(data) {
-     $.ajax('/tweets').done(function(data){
-      $('#tweet-feed').html('');
-       renderTweets(data);
-     })
+  }).done(function(data) {
+      loadTweets();
      $('#tweet-textarea').val('');
    })
+
+  } else {
+  $("#alert").addClass('alert-box');
+  $("#alert").html("Invalid Entry , Please Provide a Tweet");
+  $('#tweet-textarea').on('keypress' , function() {
+     $("#alert").removeClass('alert-box');
+  })
+
+  }
+
+
+
  });
 });
