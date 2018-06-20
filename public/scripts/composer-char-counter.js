@@ -1,7 +1,7 @@
-$(document).ready(function() { console.log('ready') 
+$(document).ready(function() { console.log('ready')
 
-$("#tweet-textarea").on('input propertychange paste', function(){ 
-    
+$("#tweet-textarea").on('input propertychange paste', function(){
+
      const $counter = $('.counter');
      const tweetContent = $(this).val() ;
      const chartweetCount = Array.from(tweetContent).length ;
@@ -15,10 +15,6 @@ $("#tweet-textarea").on('input propertychange paste', function(){
         $('#counter').css('color','black');
     }
        })
-
-
-
-
 
 
 });
