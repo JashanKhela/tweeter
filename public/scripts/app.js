@@ -46,29 +46,13 @@ const data = [
   }
 ];
 
-function renderTweets(tweet) {
-  for(let item in tweet) {
-    let aTweet = tweet[item];
-    let name = aTweet['user'].name;
-    let avatar = aTweet['user']['avatars'].small;
-    let handle = aTweet['user'].handle;
-    let createdDateMilli = aTweet['created_at'] / 86400000000;
-    let createdDate = Math.round(createdDateMilli);
-    let $tweet = createTweetElement(aTweet['content']);
-    let obj = {
-      name: name,
-      avatar: avatar,
-      handle: handle,
-      createdDate: createdDate,
-      tweet: $tweet
-    }
-    let myHTMLObj = createHTMLobject(obj);
-    $('#tweet-feed').append(myHTMLObj);
+function renderTweets(tweets) {
+  for( let item in tweets){
+    createTweetElement(tweets[item]);
   }
-}
+ }
 
-function createHTMLobject(inputObj) {
-  console.log(inputObj);
+function createHTMLObject(inputObj) {
   let HTMLObj =`
    <article class="new-tweet-article">
     <header>
@@ -80,21 +64,50 @@ function createHTMLobject(inputObj) {
     <p class ="message">${inputObj.tweet}</p>
     </div>
     <footer>
-      <p>${inputObj.createdDate} Days Ago</p>
+      <p>${inputObj.createDate} Days Ago</p>
       <div class="icons">
       <span class="fa fa-flag"></span>
       <span class="fa fa-refresh" ></span>
       <span class="fa fa-heart" ></span>
-
     </footer>
   </article>
   `
-return HTMLObj;
+  return HTMLObj;
 }
 
-function createTweetElement(tweetObj) {
-  return tweetObj.text ;
+function createTweetElement(tweetObj){
+  let aTweet = tweetObj;
+  let name = aTweet['user'].name;
+  let avatar = aTweet['user']['avatars'].small;
+  let handle = aTweet['user'].handle;
+  let createdDateMilli = aTweet['created_at'] / 86400000000;
+  let createDate = Math.round(createdDateMilli);
+  let Obj = {
+    name: name,
+    avatar: avatar,
+    handle: handle,
+    createDate: createDate,
+    tweet: aTweet.content.text
+  }
+  let myHTMLObject = createHTMLObject(Obj)
+  $('#tweet-feed').prepend(myHTMLObject);
 }
 
 renderTweets(data);
+
+$('form').on('submit', function(e) {
+  e.preventDefault();
+  let data = $('form').serialize();
+// 2. Make a AJAX request using that data
+  $.ajax('/tweets', {
+  method: 'POST',
+  data: data
+   }).done(function(data) {
+     $.ajax('/tweets').done(function(data){
+      $('#tweet-feed').html('');
+       renderTweets(data);
+     })
+     $('#tweet-textarea').val('');
+   })
+ });
 });
