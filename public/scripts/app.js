@@ -85,9 +85,9 @@ function createHTMLObject(inputObj) {
     <footer>
       <p>${inputObj.createDate} Days Ago</p>
       <div class="icons">
-      <span class="fa fa-flag"></span>
-      <span class="fa fa-refresh" ></span>
-      <span class="fa fa-heart" ></span>
+      <i class="fa fa-flag"></i>
+      <i class="fa fa-refresh" ></i>
+      <i class="fa fa-heart" ></i>
     </footer>
   </article>
   `
@@ -149,4 +149,11 @@ $('form').on('submit', function(e) {
 
 
  });
+
+$("#compose").click(function(){
+    $(".new-tweet").slideToggle();
+});
+
+
+
 });

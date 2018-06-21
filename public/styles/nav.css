@@ -10,7 +10,7 @@
 }
 
 #nav-bar .header{
-    
+
     font-size: 200% ;
     line-height: 2.5 ;
     float: left ;
@@ -21,4 +21,32 @@
     float: left;
     width: 80px ;
     height: 80px ;
+ }
+
+ .compose {
+    height: 60px;
+    width: 130px ;
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    width: 120px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #a6f2e4;
+    color: #158c76;
+ }
+  button .fa {
+    padding-right: 5px ;
+ }
+ .compose:hover {
+    height: 60px;
+    width: 130px ;
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    width: 120px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: white;
+    color: black ;
  }

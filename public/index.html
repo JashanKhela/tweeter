@@ -19,39 +19,30 @@
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
       <!-- Link the Char Counter -->
     <script src ="/scripts/composer-char-counter.js"></script>
-
-
-
   </head>
-
   <body>
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button id="compose" class ="compose"><i class="fa fa-edit"></i>Compose</button>
     </nav>
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
-<!--           <article id="alert" class="alert">
-
-          </article> -->
-            <h2>Compose Tweet</h2>
-            <form method="POST" action="/tweets">
-               <textarea  id="tweet-textarea" name="text" placeholder="What are you humming about?"></textarea>
-             <!--  <textarea  id="tweet-textarea" name="tweet-textarea" placeholder="What are you humming about?"></textarea> -->
-              <input class="tweet-button"type="submit" value="Tweet">
-              <footer id="counter"class="tweet-footer"><span class="counter">140</span></footer>
-            </form>
-                      <article id="alert" class="alert">
-
-          </article>
+          <h2>Compose Tweet</h2>
+          <form method="POST" action="/tweets">
+            <textarea  id="tweet-textarea" name="text" placeholder="What are you humming about?"></textarea>
+            <input class="tweet-button"type="submit" value="Tweet">
+            <footer id="counter"class="tweet-footer"><span class="counter">140</span></footer>
+          </form>
+          <article id="alert" class="alert"></article>
         </section>
         <section id="tweet-feed" class="container-for-tweets">
  <!--          <article class="new-tweet-article">
