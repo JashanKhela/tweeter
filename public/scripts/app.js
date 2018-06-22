@@ -97,6 +97,7 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
+
   //Create a new container for each new tweet
   function createHTMLObject(inputObj) {
     const safeTweet = `${escape(inputObj.tweet)}`;
@@ -147,4 +148,8 @@ $(document).ready(function() {
       renderTweets(data);
        })
   }
+  //On the clikc of the submit button make the characters = 140
+  $('.tweet-button').on('click' , () => {
+    $('#counter').html('140');
+  })
 });
