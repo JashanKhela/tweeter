@@ -80,7 +80,7 @@ $(document).ready(function() {
   //This function checks to see if the formdata is correct and has a value
   function formValidation(formdata) {
     let valid = true;
-    if(formdata.length === 5){
+    if(formdata.length === 5 || formdata.length >= 144){
       valid = false;
     }
     return valid;
