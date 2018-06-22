@@ -2,7 +2,7 @@
 .container {
   height: 100%;
 }
-
+/*The following CSS helps style the containers that hold the tweets*/
 .new-tweet-article {
   height: 210px;
   background-color: white;
@@ -13,6 +13,7 @@
   border-bottom-right-radius: 10px ;
   border-bottom-left-radius: 10px ;
 }
+/*style the containers*/
 .new-tweet-article img{
   float: left;
   margin-top: 10px;
@@ -94,6 +95,7 @@ margin-top: 5px;
   top: 10px;
   right: 15px;
 }
+/*when hovering over the container show these buttons*/
 .new-tweet-article:hover footer .icons{
   display: block;
 }
