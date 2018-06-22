@@ -16,6 +16,7 @@ Tweeter is a simple, single-page Twitter clone. Tweeter is here to help you shar
 - Chance
 - md5
 - MongoDB
+- Node 5.10.x or above
 
 ## Getting Started
 
@@ -30,8 +31,3 @@ Tweeter is a simple, single-page Twitter clone. Tweeter is here to help you shar
 - Character limit
 - Storing tweets in DB
 
-
-## Dependencies
-
-- Express
-- Node 5.10.x or above
