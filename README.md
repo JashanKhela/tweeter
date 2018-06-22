@@ -1,5 +1,6 @@
 # Tweeter Project
-Tweeter is a simple, single-page Twitter clone.
+
+Tweeter is a simple, single-page Twitter clone. Tweeter is here to help you share your experiences with others and help get you connected to others like you.
 
 ## Final Product
 !["Screenshot of Home Page "](https://github.com/JashanKhela/tweeter/blob/master/docs/tweeter-home-page.png?raw=true)
