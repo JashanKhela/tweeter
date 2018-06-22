@@ -2,10 +2,10 @@
 Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
-!["Screenshot of Home Page"](https://github.com/JashanKhela/tinyApp/blob/master/docs/HomePage.png?raw=true)
-!["Screenshot of User Page"](https://github.com/JashanKhela/tinyApp/blob/master/docs/UserPage.png?raw=true)
-!["Screenshot of New URL PAge"](https://github.com/JashanKhela/tinyApp/blob/master/docs/NewLinkPage.png?raw=true)
-!["Screenshot of Login Form"](https://github.com/JashanKhela/tinyApp/blob/master/docs/LoginPage.png?raw=true)
+!["Screenshot of Home Page "](https://github.com/JashanKhela/tweeter/blob/master/docs/tweeter-home-page.png?raw=true)
+!["Screenshot of Composing a tweet "](https://github.com/JashanKhela/tweeter/blob/master/docs/compose-tweet.png?raw=true)
+!["Screenshot of New Tweet "](https://github.com/JashanKhela/tweeter/blob/master/docs/new-tweet.png?raw=true)
+
 
 ## Dependencies
 
