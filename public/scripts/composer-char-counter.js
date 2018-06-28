@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $("#tweet-textarea").on('input propertychange paste', function(){
+    $("#tweet-textarea").on('keyup', function(){
+    
+
      const $counter = $('.counter');
      const tweetContent = $(this).val();
      const chartweetCount = Array.from(tweetContent).length;
