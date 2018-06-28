@@ -148,8 +148,5 @@ $(document).ready(function() {
       renderTweets(data);
        })
   }
-  //On the clikc of the submit button make the characters = 140
-  // $('.tweet-button').on('click' , () => {
-  //   $('#counter').html('140');
-  // })
+
 });
